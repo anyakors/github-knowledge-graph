@@ -32,7 +32,9 @@ def visualize_knowledge_graph(graph_path, output_path=None):
                     label=node["label"], 
                     title=f"Type: {node['type']}<br>Repos: {', '.join(node['repositories'])}",
                     size=size,
-                    color=color)
+                    color=color,
+                    font={'size': 100, 'face': 'Arial', 'color': 'black'}, 
+                    fixed=False)
     
     # Add edges
     for edge in data["edges"]:
